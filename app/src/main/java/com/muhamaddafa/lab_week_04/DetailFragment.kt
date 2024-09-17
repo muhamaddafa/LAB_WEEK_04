@@ -5,17 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [DetailFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class DetailFragment : Fragment() {
     private val coffeeTitle: TextView?
         get() = view?.findViewById(R.id.coffee_title)
@@ -36,7 +27,7 @@ class DetailFragment : Fragment() {
         val coffeeId = arguments?.getInt(COFFEE_ID, 0) ?: 0
         setCoffeeData(coffeeId)
     }
-    fun setCoffeeData(id: Int){
+    private fun setCoffeeData(id: Int){
         when(id){
             R.id.affogato -> {
                 coffeeTitle?.text = getString(R.string.affogato_title)
