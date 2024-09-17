@@ -48,5 +48,8 @@ class ListFragment : Fragment() {
                 )
             }
         }
+        companion object {
+            const val COFFEE_ID = "COFFEE_ID"
+        }
     }
 }
