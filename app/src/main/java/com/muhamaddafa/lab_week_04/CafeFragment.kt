@@ -20,16 +20,24 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class CafeFragment : Fragment() {
+
+    private val TABS_FIXED = listOf(
+        R.string.starbucks_title,
+        R.string.janjijiwa_title,
+        R.string.kopikenangan_title,
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-// Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_cafe, container, false)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val viewPager = view.findViewById<ViewPager2>(R.id.view_pager)
